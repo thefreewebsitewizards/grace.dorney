@@ -1,0 +1,112 @@
+/* Additional App-specific styles */
+.App {
+  text-align: left;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-burgundy hover:bg-opacity-80 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-burgundy/30;
+}
+
+.btn-secondary {
+  @apply border-2 border-butter text-butter hover:bg-butter hover:text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+}
+
+.btn-outline {
+  @apply border-2 border-white text-white hover:bg-white hover:text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+}
+
+/* Card styles */
+.card {
+  @apply bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-800;
+}
+
+.card:hover {
+  @apply border-burgundy/50;
+}
+
+/* Image overlay effects */
+.image-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center;
+}
+
+.image-overlay:hover {
+  @apply bg-opacity-30;
+}
+
+/* Text effects */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Loading states */
+.skeleton {
+  @apply animate-pulse bg-gray-800 rounded;
+}
+
+/* Responsive grid layouts */
+.grid-responsive {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+.grid-responsive-2 {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+/* Custom scrollbar for specific elements */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #71151a;
+  border-radius: 3px;
+}
+
+/* Focus states for accessibility */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-burgundy ring-offset-2 ring-offset-black;
+}
+
+/* --- Animations & Effects --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.4s ease-out both; }
+.animate-fade-in-delayed { animation: fadeIn 0.6s ease-out 0.15s both; }
+.animate-scale-in { animation: scaleIn 0.25s ease-out both; }
+.animate-slide-in-right { animation: slideInRight 0.25s ease-out both; }
+
+/* Hover lift utility used on cards */
+.hover-lift { transition: transform 300ms ease, box-shadow 300ms ease; }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.35); }
+
+/* Modal helpers */
+.modal-overlay { animation: fadeIn 0.2s ease-out; }
+.modal-panel { animation: scaleIn 0.22s ease-out; }
