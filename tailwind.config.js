@@ -8,17 +8,22 @@ export default {
     extend: {
       colors: {
         // Brand colors for dusk till dorn
+        // Primary accent: Pink
+        'soft-pink': '#f774cb',
+        // Primary dark: Brand black
+        black: '#31312d',
+        'logo-dark': '#31312d',
+        // Legacy palette retained only if referenced elsewhere
         burgundy: '#71151a',
         butter: '#fff4cf',
-        'soft-pink': '#ff69b4', // Adjusted to match provided logo pink
-        'logo-dark': '#2f3030',
         charcoal: '#36454f',
       },
       fontFamily: {
-        // Custom fonts for brand identity
-        'lazy-dog': ['LazyDog', 'serif'], // For "dorn"
-        'moon-time': ['MoonTime', 'sans-serif'], // For "dusk till"
-        'agrandir': ['Agrandir Wide', 'sans-serif'], // For headings
+        'lazy-dog': ['LazyDog', 'serif'],
+        'moon-time': ['MoonTime', 'sans-serif'],
+        'agrandir': ['Agrandir Wide', 'sans-serif'],
+        'heading': ['Horizon', 'Agrandir Wide', 'Inter', 'sans-serif'],
+        'secondary': ['Agrandir Wide', 'Inter', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',

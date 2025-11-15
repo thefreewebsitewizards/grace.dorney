@@ -28,25 +28,25 @@ const Shipping = () => {
       </Helmet>
       <div className="max-w-2xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-white mb-6">Shipping Options</h1>
-        <form onSubmit={handleContinue} className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 shadow-lg space-y-6">
+        <form onSubmit={handleContinue} className="bg-[#44443E] rounded-2xl p-6 md:p-8 border border-gray-800 shadow-lg space-y-6">
           <div>
             <h2 className="text-white font-semibold mb-3">Delivery method</h2>
             <div className="space-y-2 text-sm">
-              <label className={`flex items-center justify-between p-3 rounded-lg border ${option==='standard'?'border-burgundy bg-black':'border-gray-800 bg-black'}`}>
+              <label className={`flex items-center justify-between p-3 rounded-lg border ${option==='standard'?'border-soft-pink bg-black':'border-gray-800 bg-black'}`}>
                 <div className="flex items-center space-x-3">
                   <input type="radio" name="ship" checked={option==='standard'} onChange={()=>setOption('standard')} />
                   <span className="text-gray-300">Standard (3–5 days)</span>
                 </div>
                 <span className="text-gray-300">Free</span>
               </label>
-              <label className={`flex items-center justify-between p-3 rounded-lg border ${option==='express'?'border-burgundy bg-black':'border-gray-800 bg-black'}`}>
+              <label className={`flex items-center justify-between p-3 rounded-lg border ${option==='express'?'border-soft-pink bg-black':'border-gray-800 bg-black'}`}>
                 <div className="flex items-center space-x-3">
                   <input type="radio" name="ship" checked={option==='express'} onChange={()=>setOption('express')} />
                   <span className="text-gray-300">Express (1–2 days)</span>
                 </div>
                 <span className="text-gray-300">₱199</span>
               </label>
-              <label className={`flex items-center justify-between p-3 rounded-lg border ${option==='overnight'?'border-burgundy bg-black':'border-gray-800 bg-black'}`}>
+              <label className={`flex items-center justify-between p-3 rounded-lg border ${option==='overnight'?'border-soft-pink bg-black':'border-gray-800 bg-black'}`}>
                 <div className="flex items-center space-x-3">
                   <input type="radio" name="ship" checked={option==='overnight'} onChange={()=>setOption('overnight')} />
                   <span className="text-gray-300">Overnight</span>
@@ -60,11 +60,11 @@ const Shipping = () => {
             <h2 className="text-white font-semibold mb-3">Shipping address</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input value={address} onChange={e=>setAddress(e.target.value)} placeholder="Street Address"
-                className="bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy md:col-span-2" />
+                className="bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink md:col-span-2" />
               <input value={city} onChange={e=>setCity(e.target.value)} placeholder="City"
-                className="bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy" />
+                className="bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink" />
               <input value={zip} onChange={e=>setZip(e.target.value)} placeholder="ZIP"
-                className="bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy" />
+                className="bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink" />
             </div>
           </div>
 

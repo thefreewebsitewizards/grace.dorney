@@ -19,7 +19,7 @@ const ShippingConfirmModal = ({ open, onClose, option, address, city, zip, price
             </div>
             <div className="flex items-center justify-between">
               <span className="text-gray-400">Price</span>
-              <span className="text-butter font-semibold">₱{price ?? 0}</span>
+              <span className="text-soft-pink font-semibold">₱{price ?? 0}</span>
             </div>
             <div>
               <span className="text-gray-400 block mb-1">Ship to</span>

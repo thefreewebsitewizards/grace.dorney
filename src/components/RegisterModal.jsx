@@ -67,7 +67,7 @@ const RegisterModal = ({ open, onClose, prefillEmail = '' }) => {
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black bg-opacity-60" onClick={onClose} />
       <div className="absolute inset-0 flex items-center justify-center p-4">
-        <div className="w-full max-w-md bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-lg">
+        <div className="w-full max-w-md bg-[#44443E] border border-gray-800 rounded-2xl p-6 shadow-lg">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-semibold text-white">Create account</h2>
             <button className="text-gray-400 hover:text-white" onClick={onClose}>✕</button>
@@ -76,26 +76,26 @@ const RegisterModal = ({ open, onClose, prefillEmail = '' }) => {
             <div>
               <label className="block text-sm text-gray-400 mb-1">Name</label>
               <input type="text" value={name} onChange={(e)=>setName(e.target.value)}
-                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy" placeholder="Juan Dela Cruz" />
+                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink" placeholder="Juan Dela Cruz" />
             </div>
             <div>
               <label className="block text-sm text-gray-400 mb-1">Email</label>
               <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}
-                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy" placeholder="you@gmail.com" autoComplete="email" />
+                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink" placeholder="you@gmail.com" autoComplete="email" />
             </div>
             <div>
               <label className="block text-sm text-gray-400 mb-1">Password</label>
               <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}
-                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy" placeholder="••••••••" autoComplete="new-password" />
+                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink" placeholder="••••••••" autoComplete="new-password" />
             </div>
             <div>
               <label className="block text-sm text-gray-400 mb-1">Confirm password</label>
               <input type="password" value={confirm} onChange={(e)=>setConfirm(e.target.value)}
-                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy" placeholder="••••••••" autoComplete="new-password" />
+                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink" placeholder="••••••••" autoComplete="new-password" />
             </div>
 
             {error && <div className="text-soft-pink text-sm">{error}</div>}
-            {success && <div className="text-butter text-sm">{success}</div>}
+            {success && <div className="text-soft-pink text-sm">{success}</div>}
 
             <button type="submit" disabled={loading} className={`w-full btn-primary ${loading ? 'opacity-80 cursor-not-allowed' : ''}`}>
               {loading ? 'Creating…' : 'Create account'}

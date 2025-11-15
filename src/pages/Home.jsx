@@ -34,7 +34,7 @@ const Home = () => {
     <div className="min-h-screen page-transition">
       
       {/* Hero Section - Split full-bleed photos with minimal overlay */}
-      <section className="relative min-h-screen pt-16 bg-black">
+      <section className="relative min-h-screen bg-black">
         <div className="grid grid-cols-1 md:grid-cols-2 h-[calc(100vh-4rem)]">
           {/* Left photo */}
           <div className="relative overflow-hidden">
@@ -133,12 +133,12 @@ const Home = () => {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-20 px-4 bg-gray-900">
+      <section className="py-20 px-4 bg-[#44443E]">
         <div className="max-w-7xl mx-auto">
           
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Going <span className="text-burgundy">Viral</span>
+              Going <span className="text-soft-pink">Viral</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From viral moments to signature pieces - these are our most coveted designs right now.
@@ -153,7 +153,7 @@ const Home = () => {
                 to={`/product/${product.id}`}
                 className="group"
               >
-                <div className="card hover-lift">
+                <div className="card hover-lift !bg-[#31312d]">
                   
                   {/* Product Image */}
                   <div className="relative overflow-hidden rounded-lg mb-4">
@@ -166,12 +166,12 @@ const Home = () => {
                     {/* Product badges */}
                     <div className="absolute top-4 left-4 space-y-2">
                       {product.tags.includes('new') && (
-                        <span className="bg-butter text-black text-xs font-bold px-2 py-1 rounded">
+                        <span className="bg-soft-pink text-black text-xs font-bold px-2 py-1 rounded">
                           NEW
                         </span>
                       )}
                       {product.tags.includes('sale') && (
-                        <span className="bg-burgundy text-white text-xs font-bold px-2 py-1 rounded">
+                        <span className="bg-soft-pink text-white text-xs font-bold px-2 py-1 rounded">
                           SALE
                         </span>
                       )}
@@ -182,11 +182,11 @@ const Home = () => {
 
                   {/* Product Info */}
                   <div className="space-y-2">
-                    <h3 className="text-white font-semibold text-lg group-hover:text-butter transition-colors duration-300">
+                    <h3 className="text-white font-semibold text-lg group-hover:text-soft-pink transition-colors duration-300">
                       {product.name}
                     </h3>
                     <div className="flex items-center space-x-2">
-                      <span className="text-butter font-bold text-xl">
+                      <span className="text-soft-pink font-bold text-xl">
                         ${product.price}
                       </span>
                       {product.originalPrice && (
@@ -221,7 +221,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto text-center">
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            From <span className="text-butter">Dusk</span> Till <span className="text-soft-pink">Dorn</span>
+            From <span className="text-soft-pink">Dusk</span> Till <span className="text-soft-pink">Dorn</span>
           </h2>
           
           <p className="text-xl text-gray-300 leading-relaxed mb-8">

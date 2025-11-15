@@ -6,12 +6,12 @@ const About = () => {
     <div className="min-h-screen pt-20 bg-black">
       
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              <span className="font-moontime">About</span>{' '}
-              <span className="font-lazydog text-soft-pink">dusk till dorn</span>
+              <span className="font-horizon">About</span>{' '}
+              <span className="font-horizon  text-soft-pink">dusk till dorn</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               {brandInfo.tagline}
@@ -21,7 +21,7 @@ const About = () => {
       </section>
 
       {/* Brand Story Section */}
-      <section className="py-16">
+      <section className="py-16 bg-[#44443E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
@@ -34,7 +34,7 @@ const About = () => {
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
                     Born from the intersection of streetwear culture and artistic expression, 
-                    <span className="text-butter font-semibold"> dusk till dorn</span> represents 
+                    <span className="text-soft-pink font-semibold"> dusk till dorn</span> represents 
                     the hours when creativity flows freely and boundaries dissolve.
                   </p>
                   <p>
@@ -51,9 +51,9 @@ const About = () => {
               </div>
 
               {/* Mission Statement */}
-              <div className="bg-gray-900 p-8 rounded-xl border-l-4 border-burgundy">
+              <div className="bg-soft-pink p-8 rounded-xl border-l-4 border-white">
                 <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-white leading-relaxed">
                   To create clothing that empowers individuals to express their authentic 
                   selves with confidence, combining streetwear aesthetics with premium 
                   quality and sustainable practices.
@@ -73,14 +73,14 @@ const About = () => {
               
               {/* Floating accent */}
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-soft-pink rounded-full opacity-20"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-butter rounded-full opacity-10"></div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-soft-pink rounded-full opacity-10"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-gray-900/30">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -95,8 +95,8 @@ const About = () => {
             
             {/* Authenticity */}
             <div className="text-center group">
-              <div className="w-20 h-20 bg-burgundy rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-soft-pink rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
@@ -109,7 +109,7 @@ const About = () => {
 
             {/* Quality */}
             <div className="text-center group">
-              <div className="w-20 h-20 bg-butter rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 bg-soft-pink rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -139,7 +139,7 @@ const About = () => {
       </section>
 
       {/* Creative Process Section */}
-      <section className="py-16">
+      <section className="py-16 bg-[#44443E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
@@ -151,7 +151,7 @@ const About = () => {
                   alt="Creative Process"
                   className="w-full h-96 lg:h-[500px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-burgundy/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-soft-pink/20 to-transparent"></div>
               </div>
             </div>
 
@@ -180,8 +180,8 @@ const About = () => {
               {/* Process Steps */}
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-burgundy rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold text-sm">1</span>
+                  <div className="w-8 h-8 bg-soft-pink rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-black font-bold text-sm">1</span>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Research & Inspiration</h4>
@@ -190,7 +190,7 @@ const About = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-butter rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-soft-pink rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-black font-bold text-sm">2</span>
                   </div>
                   <div>
@@ -215,7 +215,7 @@ const About = () => {
       </section>
 
       {/* Color Story Section */}
-      <section className="py-16 bg-gray-900/30">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -258,7 +258,7 @@ const About = () => {
 
             {/* Charcoal */}
             <div className="text-center">
-              <div className="w-24 h-24 bg-charcoal rounded-full mx-auto mb-4 shadow-lg border border-gray-600"></div>
+              <div className="w-24 h-24 bg-black rounded-full mx-auto mb-4 shadow-lg border border-gray-600"></div>
               <h3 className="text-xl font-bold text-white mb-2">Charcoal</h3>
               <p className="text-gray-400 text-sm">
                 Represents the urban landscape, sophistication, and the foundation of street culture.
@@ -269,7 +269,7 @@ const About = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20">
+      <section className="py-20 bg-[#44443E]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Join the Movement

@@ -10,11 +10,11 @@
 
 /* Custom button styles */
 .btn-primary {
-  @apply bg-burgundy hover:bg-opacity-80 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-burgundy/30;
+  @apply bg-soft-pink hover:bg-opacity-80 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-soft-pink/30;
 }
 
 .btn-secondary {
-  @apply border-2 border-butter text-butter hover:bg-butter hover:text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+  @apply border-2 border-soft-pink text-soft-pink hover:bg-soft-pink hover:text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300;
 }
 
 .btn-outline {
@@ -23,11 +23,11 @@
 
 /* Card styles */
 .card {
-  @apply bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-800;
+  @apply bg-[#44443E] rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-800;
 }
 
 .card:hover {
-  @apply border-burgundy/50;
+  @apply border-soft-pink/50;
 }
 
 /* Image overlay effects */
@@ -46,7 +46,7 @@
 
 /* Loading states */
 .skeleton {
-  @apply animate-pulse bg-gray-800 rounded;
+  @apply animate-pulse bg-[#44443E] rounded;
 }
 
 /* Responsive grid layouts */
@@ -68,13 +68,13 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #71151a;
+  background: #f774cb;
   border-radius: 3px;
 }
 
 /* Focus states for accessibility */
 .focus-visible:focus {
-  @apply outline-none ring-2 ring-burgundy ring-offset-2 ring-offset-black;
+  @apply outline-none ring-2 ring-soft-pink ring-offset-2 ring-offset-black;
 }
 
 /* --- Animations & Effects --- */

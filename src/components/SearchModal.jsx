@@ -32,7 +32,7 @@ const SearchModal = ({ open, onClose }) => {
     <div className="fixed inset-0 z-[60]">
       <div className="absolute inset-0 bg-black/80" onClick={onClose} />
 
-      <div className="absolute left-1/2 top-20 -translate-x-1/2 w-[92%] max-w-2xl bg-gray-900 border border-gray-800 rounded-xl shadow-xl">
+      <div className="absolute left-1/2 top-20 -translate-x-1/2 w-[92%] max-w-2xl bg-[#44443E] border border-gray-800 rounded-xl shadow-xl">
         <div className="flex items-center p-3 border-b border-gray-800">
           <input
             id="global-search-input"

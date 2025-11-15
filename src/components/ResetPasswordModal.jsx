@@ -96,12 +96,12 @@ const ResetPasswordModal = ({ open, onClose }) => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy"
+                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink"
                 placeholder="you@gmail.com"
                 autoComplete="email"
               />
               {error && <div className="text-soft-pink text-sm">{error}</div>}
-              {success && <div className="text-butter text-sm">{success}</div>}
+              {success && <div className="text-soft-pink text-sm">{success}</div>}
               <button onClick={submitEmail} className={`w-full btn-primary ${loading ? 'opacity-80 cursor-not-allowed' : ''}`} disabled={loading}>
                 {loading ? 'Sending…' : 'Send OTP'}
               </button>
@@ -117,11 +117,11 @@ const ResetPasswordModal = ({ open, onClose }) => {
                 maxLength={6}
                 value={otp}
                 onChange={(e) => setOtp(e.target.value.replace(/\D/g, ''))}
-                className="w-full tracking-widest text-center bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy"
+                className="w-full tracking-widest text-center bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink"
                 placeholder="••••••"
               />
               {error && <div className="text-soft-pink text-sm">{error}</div>}
-              {success && <div className="text-butter text-sm">{success}</div>}
+              {success && <div className="text-soft-pink text-sm">{success}</div>}
               <button onClick={submitOtp} className={`w-full btn-primary ${loading ? 'opacity-80 cursor-not-allowed' : ''}`} disabled={loading}>
                 {loading ? 'Verifying…' : 'Verify OTP'}
               </button>
@@ -135,18 +135,18 @@ const ResetPasswordModal = ({ open, onClose }) => {
                 type="password"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
-                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy"
+                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink"
                 placeholder="New password"
               />
               <input
                 type="password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-burgundy"
+                className="w-full bg-black border border-gray-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-soft-pink"
                 placeholder="Confirm password"
               />
               {error && <div className="text-soft-pink text-sm">{error}</div>}
-              {success && <div className="text-butter text-sm">{success}</div>}
+              {success && <div className="text-soft-pink text-sm">{success}</div>}
               <button onClick={submitNew} className={`w-full btn-primary ${loading ? 'opacity-80 cursor-not-allowed' : ''}`} disabled={loading}>
                 {loading ? 'Saving…' : 'Reset Password'}
               </button>

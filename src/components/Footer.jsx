@@ -46,7 +46,8 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 mt-20">
+    <footer className="relative bg-[#31312d] mt-20">
+      <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-b from-soft-pink to-transparent opacity-70 pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Main Footer Content */}
@@ -79,7 +80,7 @@ const Footer = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="block text-gray-400 hover:text-butter transition-colors duration-300 text-sm"
+                  className="block text-gray-400 hover:text-soft-pink transition-colors duration-300 text-sm"
                 >
                   {link.name}
                 </Link>
@@ -115,9 +116,9 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-burgundy transition-colors duration-300"
+                  className="flex-1 px-3 py-2 bg-black border border-soft-pink rounded-lg text-white text-sm focus:outline-none focus:border-soft-pink transition-colors duration-300"
                 />
-                <button className="px-4 py-2 bg-burgundy hover:bg-opacity-80 text-white text-sm font-medium rounded-lg transition-all duration-300">
+                <button className="px-4 py-2 bg-soft-pink hover:bg-opacity-80 text-white text-sm font-medium rounded-lg transition-all duration-300">
                   Subscribe
                 </button>
               </div>
@@ -125,20 +126,19 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="border-t border-[#44443E] pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">
             © {currentYear} dusk till dorn. All rights reserved.
           </p>
           
           <div className="flex space-x-6 text-sm text-gray-400">
-            <button type="button" onClick={()=>setPrivacyOpen(true)} className="hover:text-butter transition-colors duration-300">
+            <button type="button" onClick={()=>setPrivacyOpen(true)} className="hover:text-soft-pink transition-colors duration-300">
               Privacy Policy
             </button>
-            <button type="button" onClick={()=>setTermsOpen(true)} className="hover:text-butter transition-colors duration-300">
+            <button type="button" onClick={()=>setTermsOpen(true)} className="hover:text-soft-pink transition-colors duration-300">
               Terms of Service
             </button>
-            <button type="button" onClick={()=>setSizeOpen(true)} className="hover:text-butter transition-colors duration-300">
+            <button type="button" onClick={()=>setSizeOpen(true)} className="hover:text-soft-pink transition-colors duration-300">
               Size Guide
             </button>
           </div>

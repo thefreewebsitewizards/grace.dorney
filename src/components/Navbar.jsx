@@ -29,9 +29,10 @@ const Navbar = ({ onSearchClick, onCartClick }) => {
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 relative ${
       isScrolled ? 'bg-black' : 'bg-transparent'
     }`}>
+      <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-t from-soft-pink to-transparent opacity-70 pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-16">
           
@@ -65,12 +66,12 @@ const Navbar = ({ onSearchClick, onCartClick }) => {
                   key={link.name}
                   to={link.path}
                   className={`uppercase tracking-widest text-xs transition-all duration-300 relative group ${
-                    isActive ? 'text-butter' : 'text-gray-300 hover:text-butter'
+                    isActive ? 'text-soft-pink' : 'text-gray-300 hover:text-soft-pink'
                   }`}
                 >
                   {link.name}
                   {/* Active indicator */}
-                  <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-butter transform transition-transform duration-300 ${
+                  <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-soft-pink transform transition-transform duration-300 ${
                     isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}></span>
                 </Link>
@@ -79,13 +80,13 @@ const Navbar = ({ onSearchClick, onCartClick }) => {
             
             {/* Right-side actions: Search, Account, Cart */}
             <div className="flex items-center space-x-6 text-gray-300">
-              <button onClick={onSearchClick} className="hover:text-butter transition-colors" aria-label="Search">
+              <button onClick={onSearchClick} className="hover:text-soft-pink transition-colors" aria-label="Search">
                 <MagnifyingGlassIcon className="w-5 h-5" />
               </button>
-              <Link to="/account" className="hover:text-butter transition-colors" aria-label="Account">
+              <Link to="/account" className="hover:text-soft-pink transition-colors" aria-label="Account">
                 <UserIcon className="w-5 h-5" />
               </Link>
-              <button onClick={onCartClick} className="hover:text-butter transition-colors relative" aria-label="Cart">
+              <button onClick={onCartClick} className="hover:text-soft-pink transition-colors relative" aria-label="Cart">
                 <ShoppingCartIcon className="w-5 h-5" />
               </button>
             </div>
@@ -94,7 +95,7 @@ const Navbar = ({ onSearchClick, onCartClick }) => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white hover:text-butter transition-colors duration-300"
+            className="md:hidden text-white hover:text-soft-pink transition-colors duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
@@ -126,7 +127,7 @@ const Navbar = ({ onSearchClick, onCartClick }) => {
                   key={link.name}
                   to={link.path}
                   className={`block uppercase tracking-widest text-sm transition-colors duration-300 ${
-                    isActive ? 'text-butter' : 'text-gray-300 hover:text-butter'
+                    isActive ? 'text-soft-pink' : 'text-gray-300 hover:text-soft-pink'
                   }`}
                 >
                   {link.name}
@@ -135,7 +136,7 @@ const Navbar = ({ onSearchClick, onCartClick }) => {
             })}
             
             {/* Mobile Cart */}
-            <button onClick={onCartClick} className="flex items-center space-x-2 text-gray-300 hover:text-butter transition-colors duration-300">
+            <button onClick={onCartClick} className="flex items-center space-x-2 text-gray-300 hover:text-soft-pink transition-colors duration-300">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 11-4 0v-6m4 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
               </svg>

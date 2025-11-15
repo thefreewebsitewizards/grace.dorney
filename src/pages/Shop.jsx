@@ -93,8 +93,8 @@ const Shop = () => {
                 onClick={() => handleCategoryChange(cat.id)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === cat.id
-                    ? 'bg-burgundy text-white shadow-lg'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                    ? 'bg-soft-pink text-white shadow-lg'
+                    : 'bg-[#44443E] text-gray-300 hover:bg-[#44443E] hover:text-white'
                 }`}
               >
                 {cat.name}
@@ -111,7 +111,7 @@ const Shop = () => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="bg-gray-800 text-white border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-burgundy"
+              className="bg-[#44443E] text-white border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-soft-pink"
             >
               <option value="featured">Featured</option>
               <option value="name">Name A-Z</option>
@@ -126,7 +126,7 @@ const Shop = () => {
           // Loading skeleton
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {[...Array(8)].map((_, index) => (
-              <div key={index} className="card">
+              <div key={index} className="card bg-[#44443E]">
                 <div className="skeleton h-80 mb-4"></div>
                 <div className="skeleton h-4 mb-2"></div>
                 <div className="skeleton h-4 w-20"></div>
@@ -150,7 +150,7 @@ const Shop = () => {
                 to={`/product/${product.id}`}
                 className="group"
               >
-                <div className="card hover-lift">
+                <div className="card hover-lift bg-[#44443E]">
                   
                   {/* Product Image */}
                   <div className="relative overflow-hidden rounded-lg mb-4">
@@ -163,12 +163,12 @@ const Shop = () => {
                     {/* Product badges */}
                     <div className="absolute top-4 left-4 space-y-2">
                       {product.tags.includes('new') && (
-                        <span className="bg-butter text-black text-xs font-bold px-2 py-1 rounded">
+                        <span className="bg-soft-pink text-black text-xs font-bold px-2 py-1 rounded">
                           NEW
                         </span>
                       )}
                       {product.tags.includes('sale') && (
-                        <span className="bg-burgundy text-white text-xs font-bold px-2 py-1 rounded">
+                        <span className="bg-soft-pink text-white text-xs font-bold px-2 py-1 rounded">
                           SALE
                         </span>
                       )}
@@ -186,12 +186,12 @@ const Shop = () => {
 
                   {/* Product Info */}
                   <div className="space-y-2">
-                    <h3 className="text-white font-semibold text-lg group-hover:text-butter transition-colors duration-300 line-clamp-2">
+                    <h3 className="text-white font-semibold text-lg group-hover:text-soft-pink transition-colors duration-300 line-clamp-2">
                       {product.name}
                     </h3>
                     
                     <div className="flex items-center space-x-2">
-                      <span className="text-butter font-bold text-xl">
+                      <span className="text-soft-pink font-bold text-xl">
                         ${product.price}
                       </span>
                       {product.originalPrice && (
@@ -218,7 +218,7 @@ const Shop = () => {
                         {product.tags.slice(0, 2).map((tag) => (
                           <span 
                             key={tag}
-                            className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded"
+                            className="text-xs text-gray-400 bg-[#44443E] border border-soft-pink px-2 py-1 rounded"
                           >
                             {tag}
                           </span>
@@ -251,7 +251,7 @@ const Shop = () => {
 
         {/* Newsletter Signup Section */}
         {filteredProducts.length > 0 && (
-          <div className="mt-20 bg-gray-900 rounded-2xl p-8 md:p-12 text-center">
+          <div className="mt-20 bg-[#44443E] rounded-2xl p-8 md:p-12 text-center">
             <h3 className="text-3xl font-bold text-white mb-4">
               Stay in the Loop
             </h3>
@@ -264,7 +264,7 @@ const Shop = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-burgundy transition-colors duration-300"
+                className="flex-1 px-4 py-3 bg-[#44443E] border border-soft-pink rounded-lg text-white focus:outline-none focus:border-soft-pink transition-colors duration-300"
               />
               <button className="btn-primary px-8 py-3">
                 Subscribe

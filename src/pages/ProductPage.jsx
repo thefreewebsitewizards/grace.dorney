@@ -98,11 +98,11 @@ const ProductPage = () => {
         {/* Breadcrumb */}
         <nav className="mb-8">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <Link to="/" className="hover:text-butter transition-colors">Home</Link>
+            <Link to="/" className="hover:text-soft-pink transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/shop" className="hover:text-butter transition-colors">Shop</Link>
+            <Link to="/shop" className="hover:text-soft-pink transition-colors">Shop</Link>
             <span>/</span>
-            <Link to={`/shop/${product.category}`} className="hover:text-butter transition-colors capitalize">
+            <Link to={`/shop/${product.category}`} className="hover:text-soft-pink transition-colors capitalize">
               {product.category}
             </Link>
             <span>/</span>
@@ -115,7 +115,7 @@ const ProductPage = () => {
           {/* Product Images */}
           <div className="space-y-4">
             {/* Main Image */}
-            <div className="relative overflow-hidden rounded-xl bg-gray-900">
+            <div className="relative overflow-hidden rounded-xl bg-[#44443E]">
               <img 
                 src={product.images[selectedImage]} 
                 alt={product.name}
@@ -125,12 +125,12 @@ const ProductPage = () => {
               {/* Product badges */}
               <div className="absolute top-6 left-6 space-y-2">
                 {product.tags.includes('new') && (
-                  <span className="bg-butter text-black text-sm font-bold px-3 py-1 rounded">
+                  <span className="bg-soft-pink text-black text-sm font-bold px-3 py-1 rounded">
                     NEW
                   </span>
                 )}
                 {product.tags.includes('sale') && (
-                  <span className="bg-burgundy text-white text-sm font-bold px-3 py-1 rounded">
+                  <span className="bg-soft-pink text-white text-sm font-bold px-3 py-1 rounded">
                     SALE
                   </span>
                 )}
@@ -155,7 +155,7 @@ const ProductPage = () => {
               </h1>
               
               <div className="flex items-center space-x-4 mb-4">
-                <span className="text-3xl font-bold text-butter">
+                <span className="text-3xl font-bold text-soft-pink">
                   ${product.price}
                 </span>
                 {product.originalPrice && (
@@ -188,7 +188,7 @@ const ProductPage = () => {
             {/* Color Selection */}
             <div>
               <h3 className="text-white font-semibold mb-3">
-                Color: <span className="text-butter">{selectedColor}</span>
+                Color: <span className="text-soft-pink">{selectedColor}</span>
               </h3>
               <div className="flex space-x-2">
                 {product.colors.map((color) => (
@@ -197,7 +197,7 @@ const ProductPage = () => {
                     onClick={() => setSelectedColor(color)}
                     className={`px-4 py-2 rounded-lg border-2 transition-all duration-300 ${
                       selectedColor === color
-                        ? 'border-burgundy bg-burgundy text-white'
+                        ? 'border-soft-pink bg-soft-pink text-white'
                         : 'border-gray-600 text-gray-300 hover:border-gray-400'
                     }`}
                   >
@@ -210,7 +210,7 @@ const ProductPage = () => {
             {/* Size Selection */}
             <div>
               <h3 className="text-white font-semibold mb-3">
-                Size: <span className="text-butter">{selectedSize}</span>
+                Size: <span className="text-soft-pink">{selectedSize}</span>
               </h3>
               <div className="grid grid-cols-4 gap-2">
                 {product.sizes.map((size) => (
@@ -219,7 +219,7 @@ const ProductPage = () => {
                     onClick={() => setSelectedSize(size)}
                     className={`py-3 rounded-lg border-2 transition-all duration-300 font-medium ${
                       selectedSize === size
-                        ? 'border-burgundy bg-burgundy text-white'
+                        ? 'border-soft-pink bg-soft-pink text-white'
                         : 'border-gray-600 text-gray-300 hover:border-gray-400'
                     }`}
                   >
@@ -235,7 +235,7 @@ const ProductPage = () => {
               <div className="flex items-center space-x-4">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-10 h-10 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors"
+                  className="w-10 h-10 rounded-lg bg-[#44443E] text-white hover:bg-[#44443E] transition-colors"
                 >
                   -
                 </button>
@@ -244,7 +244,7 @@ const ProductPage = () => {
                 </span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="w-10 h-10 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors"
+                  className="w-10 h-10 rounded-lg bg-[#44443E] text-white hover:bg-[#44443E] transition-colors"
                 >
                   +
                 </button>
@@ -258,14 +258,14 @@ const ProductPage = () => {
                 disabled={!product.inStock}
                 className={`w-full py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
                   product.inStock
-                    ? 'bg-burgundy hover:bg-opacity-80 text-white hover:shadow-lg'
-                    : 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                    ? 'bg-soft-pink hover:bg-opacity-80 text-white hover:shadow-lg'
+                    : 'bg-[#44443E] text-gray-400 cursor-not-allowed'
                 }`}
               >
                 {product.inStock ? 'Add to Cart' : 'Out of Stock'}
               </button>
               
-              <button className="w-full py-4 rounded-lg border-2 border-butter text-butter hover:bg-butter hover:text-black font-semibold transition-all duration-300">
+              <button className="w-full py-4 rounded-lg border-2 border-soft-pink text-soft-pink hover:bg-soft-pink hover:text-black font-semibold transition-all duration-300">
                 Add to Wishlist
               </button>
             </div>
@@ -310,7 +310,7 @@ const ProductPage = () => {
                   to={`/product/${relatedProduct.id}`}
                   className="group"
                 >
-                  <div className="card hover-lift">
+                  <div className="card hover-lift bg-[#44443E]">
                     <div className="relative overflow-hidden rounded-lg mb-4">
                       <img 
                         src={relatedProduct.images[0]} 
@@ -319,10 +319,10 @@ const ProductPage = () => {
                       />
                     </div>
                     
-                    <h3 className="text-white font-semibold mb-2 group-hover:text-butter transition-colors">
+                    <h3 className="text-white font-semibold mb-2 group-hover:text-soft-pink transition-colors">
                       {relatedProduct.name}
                     </h3>
-                    <p className="text-butter font-bold">
+                    <p className="text-soft-pink font-bold">
                       ${relatedProduct.price}
                     </p>
                   </div>
